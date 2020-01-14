@@ -20,4 +20,4 @@ def contact():
 def home():
   return render_template("home.html")
 
-app.run(host="0.0.0.0", port=8020)
+app.run(host="0.0.0.0", port=8020, threaded=True,debug=True)
