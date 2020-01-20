@@ -4,9 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 @app.route("/index")
+@app.route("/home")
+def home():
+  return render_template("home.html", active_page= "home")
 
-def getIndex():
-  return "<h1><a href='/about'>Edžus Kivilands</a></h1>"
+
 
 @app.route("/about")
 def getAbout():
@@ -16,8 +18,5 @@ def getAbout():
 def contact():
   return render_template("contact.html",phone=28834050)
 
-@app.route("/home")
-def home():
-  return render_template("home.html", active_page= "home")
 
 app.run(host="0.0.0.0", port=8020, threaded=True,debug=True)
