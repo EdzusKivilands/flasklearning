@@ -18,6 +18,6 @@ def contact():
 
 @app.route("/home")
 def home():
-  return render_template("home.html")
+  return render_template("home.html", active_page= "home")
 
 app.run(host="0.0.0.0", port=8020, threaded=True,debug=True)

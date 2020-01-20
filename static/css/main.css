@@ -2,6 +2,6 @@ p{
   color: green;
   font-size: 20px;
 }
-active > a{
+.active > a{
   color:red;
 }
