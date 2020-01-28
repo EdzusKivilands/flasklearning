@@ -22,4 +22,8 @@ def contact():
 def params():
   return request.args
 
+@app.route("/post_req", methods = ["POST"])
+def post_req():
+  return request.args
+
 app.run(host="0.0.0.0", port=8020, threaded=True,debug=True)
